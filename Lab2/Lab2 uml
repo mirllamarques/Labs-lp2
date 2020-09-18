@@ -1,0 +1,70 @@
+// duas barras definem comentários
+
+Main
+association ContaLaboratorio
+association Disciplina
+association ContaCantina
+association Saude
+---
+---
+---
+
+ContaLaboratorio
+
+---
+- lcc_ :String
+- cota_ :int
+- armazenamentoTotal_ :int
+---
++ ContaLaboratorio(nome :String)
++ ContaLaboratorio(nome :String, cota :int)
++ consomeEspaco(mybytes :int) :void
++ liberaEspaco(mybytes :int) :void
++ atingiuCota() :boolean
++ toString() :String
+---
+
+Disciplina 
+--- 
+- cadeira_ :String 
+- notas_ :ArrayList<Double>
+- tempoEstudando_ :int
+---
++ Disciplina(nomeDisciplina :String)
+- inicializaArrayList() :void
++ cadastraHoras(horas :int) :void
++ cadastraNota(nota :int, valorNota :double) :void
++ aprovado() :boolean
+- media() :double
++ toString() :String
+ 
+---
+
+ContaCantina
+
+---
+- cantina_ :String
+- devendo_ :int
+- totalGasto_ :int
+- itens_ :int
+---
++ ContaCantina(nomeDaCantina :String)
++ cadastraLanche(qtdItens :int, valorCentavos :int) :void
++ pagaConta(valorCentavos :int) :void
+
++ getFaltaPagar() :int
++ toString() :String
+---
+
+Saude
+
+---
+- saudeMental_ :String
+- saudeFisica_ :String
+---
++ Saude()
++ defineSaudeMental(valor :String) :void
++ defineSaudeFisica(valor :String) :void
++ getStatusGeral() :String
+---
+
