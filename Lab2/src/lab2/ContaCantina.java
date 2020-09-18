@@ -48,7 +48,9 @@ public class ContaCantina {
 	 * @param valorCentavos Valor, em centavos, a ser pago
 	 */
 	public void pagaConta(int valorCentavos) {
-		this.devedor -= valorCentavos;
+		if (valorCentavos <= this.devedor) {
+			this.devedor -= valorCentavos;
+		}
 	}
 	/**
 	 * Calcula o valor que ainda falta ser pago da dívida

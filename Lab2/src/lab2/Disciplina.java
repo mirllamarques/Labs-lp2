@@ -8,8 +8,6 @@ package lab2;
  * @author Mirlla Marques
  *
  */
-import java.util.ArrayList;
-
 public class Disciplina {
 	/**
 	 * Disciplina em que será realizado o controle
@@ -18,7 +16,7 @@ public class Disciplina {
 	/**
 	 * Armazena as notas do aluno na disciplina
 	 */
-	private ArrayList<Double> notas;
+	private double[] notas;
 	/**
 	 * Tempo em que o aluno passou estudando para 
 	 * aquela disciplina em horas
@@ -33,16 +31,7 @@ public class Disciplina {
 	public Disciplina(String nomeDisciplina) {
 		this.cadeira = nomeDisciplina;
 		this.tempoEstudando = 0;
-		this.notas = new ArrayList<Double>();
-		inicializaArrayList();
-	}
-	/**
-	 * Define as quatro notas inicialmente como zero
-	 */
-	private void inicializaArrayList() {
-		for (int i = 0; i < 4; i++) {
-			this.notas.add(i,0.0);
-		}
+		this.notas = new double[4];
 	}
 	/**
 	 * Aumenta a quantidade total de horas estudadas
@@ -58,7 +47,7 @@ public class Disciplina {
 	 * @param valorNota Valor obtido pelo aluno na avaliação
 	 */
 	public void cadastraNota(int nota, double valorNota) {
-		this.notas.set(nota - 1, valorNota);
+		this.notas[nota - 1] = valorNota;
 	}
 	/**
 	 * Faz o cálculo da média do aluno
@@ -66,8 +55,8 @@ public class Disciplina {
 	 */
 	private double media() {
 		double somatorio = 0;
-		for(int i =0; i < this.notas.size(); i++) {
-			somatorio += notas.get(i);
+		for(int i =0; i < this.notas.length; i++) {
+			somatorio += notas[i];
 		}
 		return somatorio/4;
 	}
