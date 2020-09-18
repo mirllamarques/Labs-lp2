@@ -27,11 +27,10 @@ ContaLaboratorio
 Disciplina 
 --- 
 - cadeira_ :String 
-- notas_ :ArrayList<Double>
+- notas_ :double[]
 - tempoEstudando_ :int
 ---
 + Disciplina(nomeDisciplina :String)
-- inicializaArrayList() :void
 + cadastraHoras(horas :int) :void
 + cadastraNota(nota :int, valorNota :double) :void
 + aprovado() :boolean
