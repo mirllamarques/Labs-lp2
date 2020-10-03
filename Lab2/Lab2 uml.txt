@@ -1,0 +1,110 @@
+Main
+association Aluno
+---
+---
+---
+
+Aluno
+composes ContaLaboratorio
+composes Disciplina
+composes ContaCantina
+composes Saude
+---
+- lcc: HashMap<String, ContaLaboratorio>
+- cadeiras: HashMap<String, Disciplina>
+- cantinas: HashMap<String, ContaCantina>
+- saude: Saude
+---
++ Aluno()
++ cadastraLaboratorio(nomeLaboratorio: String): void
++ consomeEspaco(nomeLaboratorio: String, mbytes: int): void
++ liberaEspaco(nomeLaboratorio: String, mbytes: int): void
++ atingiuCota(nomeLaboratorio: String): boolean
++ laboratorioToString(nomeLaboratorio: String): String
++ cadastraDisciplina(nomeDisciplina: String): void
++ cadastraDisciplina(nomeDisciplina: String, notas: int): void
++ cadastraDisciplina(nomeDisciplina: String, notas: int, pesos :int[]): void
++ cadastraHoras(nomeDisciplina: String, horas: int): void
++ cadastraNota(nomeDisciplina: String, nota: int, valorNota: double): void
++ aprovado(nomeDisciplina: String): boolean
++ disciplinaToString(nomeDisciplina :String): String
++ cadastraCantina(nomeCantina: String): void
++ cadastraCantina(nomeCantina: String, qtdItens: int, valorCentavos: int): void
++ cadastraCantina(nomeCantina: String, qtdItens: int, valorCentavos: int, detalhes: String): void
++ listarDetalhes(nomeCantina: String): String
++ pagarConta(nomeCantina: String, valorCentavos: int): void
++ getFaltaPagar(nomeCantina: String): int
++ cantinaToString(nomeCantina: String): String
++ defineSaudeMental(valor: String): void
++ defineSaudeFisica(valor: String): void
++ emoji(valor: String): void
+---
+
+ContaLaboratorio
+
+---
+- lcc: String
+- cota: int
+- armazenamentoTotal: int
+---
++ ContaLaboratorio(nome: String)
++ ContaLaboratorio(nome: String, cota: int)
++ consomeEspaco(mybytes: int): void
++ liberaEspaco(mybytes: int): void
++ atingiuCota(): boolean
++ toString(): String
+---
+
+Disciplina 
+--- 
+- cadeira: String 
+- notas: double[]
+- tempoEstudando: int
+- pesos: int[]
+---
++ Disciplina(nomeDisciplina :String)
++ Disciplina(nomeDisciplina :String, numNotas: int)
++ Disciplina(nomeDisciplina :String, numNotas: int, pesos: int[])
++ cadastraHoras(horas: int) :void
++ cadastraNota(nota: int, valorNota: double): void
++ aprovado(): boolean
+- media(): double
++ mediaPonderada(): double
+- boletim(): String
++ toString(): String
+ 
+---
+
+ContaCantina
+
+---
+- cantina: String
+- devedor: int
+- totalGasto: int
+- itens: int
+- detalhes: String[]
+- compras: int
+---
++ ContaCantina(nomeDaCantina: String)
++ cadastraLanche(qtdItens: int, valorCentavos: int): void
++ cadastraLanche(qtdItens: int, valorCentavos: int, detalhes: String): void
+- setDetalhes(detalhe: String): void
++ pagaConta(valorCentavos: int): void
++ getFaltaPagar(): int
++ listarDetalhes(): String
++ toString(): String
+---
+
+Saude
+
+---
+- saudeMental: String
+- saudeFisica: String
+- emoji: String
+---
++ Saude()
++ defineSaudeMental(valor: String) :void
++ defineSaudeFisica(valor: String) :void
++ definirEmoji(valor: String) :void
++ getStatusGeral() :String
+---

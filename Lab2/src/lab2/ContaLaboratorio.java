@@ -6,7 +6,7 @@ package lab2;
  * e uma cota(opcional) para controle do uso de
  * armazenamento dos computadores
  * 
- *@author Mirlla Marques
+ *@author Mirlla Marques Santana Alves - 119210401
  *
  */
 public class ContaLaboratorio{

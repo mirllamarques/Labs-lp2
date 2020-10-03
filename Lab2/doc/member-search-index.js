@@ -1,1 +1,1 @@
-memberSearchIndex = [{"p":"lab2","c":"Coisa","l":"Coisa()","url":"%3Cinit%3E()"},{"p":"lab2","c":"Coisa","l":"main(String[])","url":"main(java.lang.String[])"}]
+memberSearchIndex = [{"p":"lab2","c":"Coisa","l":"cadastroDisciplina(Aluno, String[])","url":"cadastroDisciplina(lab2.Aluno,java.lang.String[])"},{"p":"lab2","c":"Coisa","l":"cadastroLaboratorio(Aluno, String[])","url":"cadastroLaboratorio(lab2.Aluno,java.lang.String[])"},{"p":"lab2","c":"Coisa","l":"Coisa()","url":"%3Cinit%3E()"},{"p":"lab2","c":"Coisa","l":"main(String[])","url":"main(java.lang.String[])"}]
