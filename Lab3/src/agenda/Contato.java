@@ -2,7 +2,7 @@ package agenda;
 
 /**
  * Representa um contato na agenda
- * @author Mirlla Marques Santana Alves - 119210401
+ * @author Mirlla Marques Santana Alves
  */
 public class Contato {
 	

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 /**
  * Interface com menu de texto para manipular o Controle de Alunos
- * @author Mirlla Marques Santana Alves - 119210401
+ * @author Mirlla Marques Santana Alves
  */
 public class MenuMain {
 	

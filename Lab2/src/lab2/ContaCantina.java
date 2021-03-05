@@ -4,7 +4,7 @@ package lab2;
  * em que um aluno deve criar uma conta identificando
  * a cantina e assim registrar lanches comprados, valor
  * gasto e saldo devedor
- * @author Mirlla Marques Santana Alves - 119210401
+ * @author Mirlla Marques Santana Alves
  *
  */
 public class ContaCantina {

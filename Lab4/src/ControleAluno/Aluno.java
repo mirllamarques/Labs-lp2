@@ -3,7 +3,7 @@ package ControleAluno;
 /**
  * Representação de um aluno que tem informações como
  * nome, matricula e o curso
- * @author mirlla
+ * @author Mirlla Marques Santana Alves
  *
  */
 public class Aluno {

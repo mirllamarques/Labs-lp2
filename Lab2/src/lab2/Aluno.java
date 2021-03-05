@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * Representação de um aluno que realiza diversas operações 
  * baseadas em métodos de outras classes
- * @author Mirlla Marques Santana Alves - 119210401
+ * @author Mirlla Marques Santana Alves
  */
 public class Aluno {
     /**

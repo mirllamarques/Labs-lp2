@@ -2,7 +2,7 @@ package lab2;
 
 import java.util.Scanner;
 /** 
- * @author Mirlla Marques Santana Alves - 119210401
+ * @author Mirlla Marques Santana Alves
  */
 public class Coisa {
 	

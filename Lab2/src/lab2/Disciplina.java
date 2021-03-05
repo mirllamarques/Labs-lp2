@@ -5,7 +5,7 @@ package lab2;
  * seu tempo de estudo e cadastrando-o e suas notas, 
  * podendo ser registradas até 4 notas e consultar
  * a situação da disciplia e verificar aprovação
- * @author Mirlla Marques Santana Alves - 119210401
+ * @author Mirlla Marques Santana Alves
  *
  */
 public class Disciplina {

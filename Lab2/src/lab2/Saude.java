@@ -4,8 +4,7 @@ package lab2;
  * em que o aluno atualiza sua situação de saúde
  * física e mental e pode ver um balanço geral de 
  * sua saúde
- * @author Mirlla Marques Santana Alves - 119210401
- *
+ * @author Mirlla Marques Santana Alves
  */
 public class Saude {
 	/**

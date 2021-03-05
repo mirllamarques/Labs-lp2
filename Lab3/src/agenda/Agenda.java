@@ -4,7 +4,7 @@ import java.util.ArrayList;
 /**
  * Uma agenda que mantém uma lista de contatos com posições. Podem existir 100 contatos. 
  * 
- * @author Mirlla Marques Santana Alves - 119210401
+ * @author Mirlla Marques Santana Alves
  *
  */
 public class Agenda {

@@ -1,0 +1,59 @@
+# SAGA - US2.
+
+## Cadastrando fornecedores ##
+
+fornecedor1=adicionaFornecedor nome="Marcos" email="marcos@gmail.com" telefone="83 99151-3570"
+fornecedor2=adicionaFornecedor nome="Helhao" email="quiosque@gmail.com" telefone="83 98736-5050"
+fornecedor3=adicionaFornecedor nome="Dona Alba" email="alba@gmail.com" telefone="83 99945-1294"
+fornecedor4=adicionaFornecedor nome="Seu Olavo" email="olavo@gmail.com" telefone="83 99348-1092"
+
+expectError "Erro no cadastro do fornecedor: nome nao pode ser vazio ou nulo." adicionaFornecedor nome="" email="marcos@gmail.com" telefone="83 99151-3570"
+expectError "Erro no cadastro do fornecedor: nome nao pode ser vazio ou nulo." adicionaFornecedor nome= email="marcos@gmail.com" telefone="83 99151-3570"
+expectError "Erro no cadastro do fornecedor: email nao pode ser vazio ou nulo." adicionaFornecedor nome="Anel Universitario" email="" telefone="83 99298-3231"
+expectError "Erro no cadastro do fornecedor: email nao pode ser vazio ou nulo." adicionaFornecedor nome="Anel Universitario" email= telefone="83 99298-3231"
+expectError "Erro no cadastro de fornecedor: fornecedor ja existe." adicionaFornecedor nome="Marcos" email="marcos_ufcg@gmail.com" telefone="83 99211-3570"
+expectError "Erro no cadastro do fornecedor: telefone nao pode ser vazio ou nulo." adicionaFornecedor nome="Ana" email="marcos_ufcg@gmail.com" telefone=""
+expectError "Erro no cadastro do fornecedor: telefone nao pode ser vazio ou nulo." adicionaFornecedor nome="Ana" email="marcos_ufcg@gmail.com" telefone=
+
+## Exibindo fornecedores ##
+
+expect "Marcos - marcos@gmail.com - 83 99151-3570" exibeFornecedor nome="Marcos"
+expect "Helhao - quiosque@gmail.com - 83 98736-5050" exibeFornecedor nome="Helhao"
+expect "Dona Alba - alba@gmail.com - 83 99945-1294" exibeFornecedor nome="Dona Alba"
+expect "Seu Olavo - olavo@gmail.com - 83 99348-1092" exibeFornecedor nome="Seu Olavo"
+
+expectError "Erro na exibicao do fornecedor: fornecedor nao existe." exibeFornecedor nome="Anel Universitario"
+
+## Editando cadastro ##
+
+expectError "Erro na edicao do fornecedor: nome nao pode ser editado." editaFornecedor nome="Marcos" atributo="nome" novoValor="Lanchonete Marcos"
+expectError "Erro na edicao do fornecedor: atributo nao pode ser vazio ou nulo." editaFornecedor nome="Marcos" atributo="" novoValor="Lanchonete Marcos"
+expectError "Erro na edicao do fornecedor: atributo nao pode ser vazio ou nulo." editaFornecedor nome="Marcos" atributo= novoValor="Lanchonete Marcos"
+expectError "Erro na edicao do fornecedor: atributo nao existe." editaFornecedor nome="Marcos" atributo="local" novoValor="Bloco CAA"
+expectError "Erro na edicao do fornecedor: novo valor nao pode ser vazio ou nulo." editaFornecedor nome="Marcos" atributo="email" novoValor=""
+expectError "Erro na edicao do fornecedor: novo valor nao pode ser vazio ou nulo." editaFornecedor nome="Marcos" atributo="email" novoValor=
+expectError "Erro na edicao do fornecedor: novo valor nao pode ser vazio ou nulo." editaFornecedor nome="Marcos" atributo="telefone" novoValor=""
+expectError "Erro na edicao do fornecedor: novo valor nao pode ser vazio ou nulo." editaFornecedor nome="Marcos" atributo="telefone" novoValor=
+expectError "Erro na edicao do fornecedor: fornecedor nao existe." editaFornecedor nome="Anel Universitario" email="email" novoVavlor="anel_universitario@yahoo.com"
+expectError "Erro na edicao do fornecedor: nome nao pode ser vazio ou nulo." editaFornecedor nome="" email="email" novoVavlor="anel_universitario@yahoo.com"
+expectError "Erro na edicao do fornecedor: nome nao pode ser vazio ou nulo." editaFornecedor nome= email="email" novoVavlor="anel_universitario@yahoo.com"
+
+editaFornecedor nome="Marcos" atributo="email" novoValor="marcos_lanchonete@gmail.com"
+editaFornecedor nome="Marcos" atributo="telefone" novoValor="83 99931-9230"
+
+expect "Marcos - marcos_lanchonete@gmail.com - 83 99931-9230" exibeFornecedor nome="Marcos"
+
+editaFornecedor nome="Dona Alba" atributo="email" novoValor="varandas_bar@gmail.com"
+
+expect "Dona Alba - varandas_bar@gmail.com - 83 99945-1294" exibeFornecedor nome="Dona Alba"
+
+## Removendo cadastro ##
+
+expectError "Erro na remocao do fornecedor: nome do fornecedor nao pode ser vazio ou nulo." removeFornecedor nome=""
+expectError "Erro na remocao do fornecedor: nome do fornecedor nao pode ser vazio ou nulo." removeFornecedor nome=
+expectError "Erro na remocao do fornecedor: fornecedor nao existe." removeFornecedor nome="Anel Universitario"
+
+removeFornecedor nome="Helhao"
+
+expectError "Erro na exibicao do fornecedor: fornecedor nao existe." exibeFornecedor nome="Helhao"
+
